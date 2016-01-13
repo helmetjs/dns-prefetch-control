@@ -22,7 +22,7 @@ describe('dnsPrefetchControl', function () {
     .end(done)
   })
 
-  it('defaults to setting header to "off"', function (done) {
+  it('sets the header to "off" by default', function (done) {
     var app = use()
 
     request(app).get('/')
