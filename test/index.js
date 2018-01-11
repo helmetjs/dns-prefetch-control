@@ -14,36 +14,32 @@ describe('dnsPrefetchControl', function () {
     return result
   }
 
-  it('continues onto the following middleware', function (done) {
+  it('continues onto the following middleware', function () {
     var app = use()
 
-    request(app).get('/')
-    .expect('Hello world!')
-    .end(done)
+    return request(app).get('/')
+      .expect('Hello world!')
   })
 
-  it('sets the header to "off" by default', function (done) {
+  it('sets the header to "off" by default', function () {
     var app = use()
 
-    request(app).get('/')
-    .expect('X-DNS-Prefetch-Control', 'off')
-    .end(done)
+    return request(app).get('/')
+      .expect('X-DNS-Prefetch-Control', 'off')
   })
 
-  it('can set header to "off" with configuration', function (done) {
+  it('can set header to "off" with configuration', function () {
     var app = use({ allow: false })
 
-    request(app).get('/')
-    .expect('X-DNS-Prefetch-Control', 'off')
-    .end(done)
+    return request(app).get('/')
+      .expect('X-DNS-Prefetch-Control', 'off')
   })
 
-  it('can set header to "on" with configuration', function (done) {
+  it('can set header to "on" with configuration', function () {
     var app = use({ allow: true })
 
-    request(app).get('/')
-    .expect('X-DNS-Prefetch-Control', 'on')
-    .end(done)
+    return request(app).get('/')
+      .expect('X-DNS-Prefetch-Control', 'on')
   })
 
   it('names its function and middleware', function () {
