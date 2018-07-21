@@ -10,7 +10,7 @@ This middleware lets you set the `X-DNS-Prefetch-Control` to control browsers' D
 Usage:
 
 ```js
-var dnsPrefetchControl = require('dns-prefetch-control')
+const dnsPrefetchControl = require('dns-prefetch-control')
 
 // Set X-DNS-Prefetch-Control: off
 app.use(dnsPrefetchControl())
