@@ -43,7 +43,7 @@ describe('dnsPrefetchControl', function () {
   })
 
   it('names its function and middleware', function () {
-    assert.equal(dnsPrefetchControl.name, 'dnsPrefetchControl')
-    assert.equal(dnsPrefetchControl().name, 'dnsPrefetchControl')
+    assert.strictEqual(dnsPrefetchControl.name, 'dnsPrefetchControl')
+    assert.strictEqual(dnsPrefetchControl().name, 'dnsPrefetchControl')
   })
 })
