@@ -13,11 +13,18 @@
     "dns",
     "prefetch"
   ],
+  "homepage": "https://helmetjs.github.io/docs/dns-prefetch-control",
   "repository": {
     "type": "git",
     "url": "git://github.com/helmetjs/dns-prefetch-control.git"
   },
-  "bugs": "https://github.com/helmetjs/dns-prefetch-control/issues",
+  "bugs": {
+    "url": "https://github.com/helmetjs/dns-prefetch-control/issues",
+    "email": "me@evanhahn.com"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "scripts": {
     "pretest": "standard --fix",
     "test": "mocha"
