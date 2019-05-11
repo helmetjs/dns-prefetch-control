@@ -1,7 +1,6 @@
 DNS prefetch control header for Express
 =======================================
 [![Build Status](https://travis-ci.org/helmetjs/dns-prefetch-control.svg?branch=master)](https://travis-ci.org/helmetjs/dns-prefetch-control)
-[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 [_Looking for a changelog?_](https://github.com/helmetjs/helmet/blob/master/HISTORY.md)
 
