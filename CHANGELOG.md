@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.2.0 - 2019-05-11
 ### Added
 - Added TypeScript type definitions. See [#2](https://github.com/helmetjs/dns-prefetch-control/pull/2) and [helmetjs/helmet#188](https://github.com/helmetjs/helmet/issues/188)
 - Created a changelog
