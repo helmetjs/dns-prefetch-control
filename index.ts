@@ -13,7 +13,7 @@ function getHeaderValueFromOptions(options?: DnsPrefetchControlOptions): 'on' | 
 }
 
 export = function dnsPrefetchControl (options?: DnsPrefetchControlOptions) {
-  const headerValue =getHeaderValueFromOptions(options);
+  const headerValue = getHeaderValueFromOptions(options);
 
   return function dnsPrefetchControl (_req: IncomingMessage, res: ServerResponse, next: () => void) {
     res.setHeader('X-DNS-Prefetch-Control', headerValue);
