@@ -1,10 +1,13 @@
 import { IncomingMessage, ServerResponse } from 'http';
 
-interface DnsPrefetchControlOptions {
-  allow?: boolean;
+// eslint-disable-next-line @typescript-eslint/no-namespace
+namespace dnsPrefetchControl {
+  export interface DnsPrefetchControlOptions {
+    allow?: boolean;
+  }
 }
 
-function getHeaderValueFromOptions(options?: DnsPrefetchControlOptions): 'on' | 'off' {
+function getHeaderValueFromOptions(options?: dnsPrefetchControl.DnsPrefetchControlOptions): 'on' | 'off' {
   if (options && options.allow) {
     return 'on';
   } else {
@@ -12,7 +15,8 @@ function getHeaderValueFromOptions(options?: DnsPrefetchControlOptions): 'on' | 
   }
 }
 
-export = function dnsPrefetchControl (options?: DnsPrefetchControlOptions) {
+// eslint-disable-next-line no-redeclare
+function dnsPrefetchControl (options?: dnsPrefetchControl.DnsPrefetchControlOptions) {
   const headerValue = getHeaderValueFromOptions(options);
 
   return function dnsPrefetchControl (_req: IncomingMessage, res: ServerResponse, next: () => void) {
@@ -20,3 +24,5 @@ export = function dnsPrefetchControl (options?: DnsPrefetchControlOptions) {
     next();
   };
 }
+
+export = dnsPrefetchControl;
